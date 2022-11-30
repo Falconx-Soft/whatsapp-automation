@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} {{tab_title}} {% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+{% endblock %}
+
+
+{% block content %}
+    <section class="home_section">
+        <div class="form-div">
+            <h1 class="label"><b>CopyMatic Api</b></h1>
+            <form method="post">
+                {% csrf_token %}
+                <textarea class="textarea" placeholder="Enter text here" rows="10"></textarea>
+                <button class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}
+
+{% block js %}
+{% endblock %}
