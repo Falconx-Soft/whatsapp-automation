@@ -6,19 +6,54 @@
 }
 
 .form-div{
-    max-width: 850px;
+    max-width: 970px;
     width: 100%;
     margin-top: 5%;
 }
 
-.label{
-    text-align: center;
-    font-size: 38px;
+.logo-div{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    width: 350px;
+    margin-bottom: 20px;
 }
 
 .textarea{
     width: 100%;
     box-sizing: border-box;
+    padding: 10px;
+}
+
+.drop-down-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 14px 0px;
+}
+
+.input-div{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 14px 0px;
+    gap: 20px;
+}
+
+.drop-down{
+    display: flex;
+    align-items: center;
+}
+
+.drop-down>p{
+    margin: 0px;
+    margin-right: 6px;
+}
+
+.drop-down>select{
+    padding: 3px;
 }
 
 .submit-btn{
