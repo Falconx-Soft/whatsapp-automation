@@ -15,8 +15,7 @@
             </div>
             <form method="post">
                 {% csrf_token %}
-                <textarea class="textarea" placeholder="Enter text here" rows="10" name="content"></textarea>
-                
+
                 <div class="drop-down" style="margin-top: 20px;">
                     <p>Model:</p>
                     <select name="model" id="model-dropdown" onchange="model_change()">
@@ -159,11 +158,102 @@
                         <p>Topic social:</p>
                         <input type="text" placeholder="Enter company name" name="topic_social">
                     </div>
+                    <div class="drop-down" id="instagram-keyword-div">
+                        <p>Instagram keyword:</p>
+                        <input type="text" placeholder="Enter instagram keywords" name="instagram_keyword">
+                    </div>
+                    <div class="drop-down" id="productname-div">
+                        <p>Product name:</p>
+                        <input type="text" placeholder="Enter productname" name="productname">
+                    </div>
+                    <div class="drop-down" id="full-name-div">
+                        <p>Full name:</p>
+                        <input type="text" maxlength="100" placeholder="Enter full name" name="full_name">
+                    </div>
+                    <div class="drop-down" id="current-position-div">
+                        <p>Current position:</p>
+                        <input type="text" maxlength="100" placeholder="Enter current position" name="current_position">
+                    </div>
+                    <div class="drop-down" id="current-industry-div">
+                        <p>Current industry:</p>
+                        <input type="text" maxlength="100" placeholder="Enter current industry" name="current_industry">
+                    </div>
+                    <div class="drop-down" id="current-city-div">
+                        <p>Current city:</p>
+                        <input type="text" maxlength="100" placeholder="Enter current city" name="current_city">
+                    </div>
+                    <div class="drop-down" id="website-name-div">
+                        <p>Website name:</p>
+                        <input type="text" placeholder="Enter website name" name="website_name">
+                    </div>
+                    <div class="drop-down" id="website-url-div">
+                        <p>Website url:</p>
+                        <input type="url" placeholder="Enter website url" name="website_url">
+                    </div>
+                    <div class="drop-down" id="page-type-div">
+                        <p>Page type:</p>
+                        <input type="url" placeholder="Enter page type" name="page_type">
+                    </div>
                 </div>
 
-                <div class="drop-down" id="description-div">
+                <div class="drop-down textarea-div" id="description-div">
                     <p>Description:</p>
-                    <textarea class="description-area" name="description" maxlength="200" placeholder="Enter description"></textarea>
+                    <textarea class="description-area" name="description" maxlength="400" placeholder="Enter description"></textarea>
+                </div>
+
+                <div class="drop-down textarea-div" id="topic-div">
+                    <p>Topic:</p>
+                    <textarea class="description-area" name="topic" maxlength="400" placeholder="Enter topic"></textarea>
+                </div>
+
+                <div class="drop-down textarea-div" id="video-description-div">
+                    <p>Video Description:</p>
+                    <textarea class="description-area" name="video_description" maxlength="200" placeholder="Enter video description"></textarea>
+                </div>
+
+                <div class="drop-down textarea-div" id="video-title-div">
+                    <p>Video title:</p>
+                    <textarea class="description-area" name="video_title" maxlength="200" placeholder="Enter video title"></textarea>
+                </div>
+
+                <div class="drop-down textarea-div" id="quora-question-div">
+                    <p>Quora question:</p>
+                    <textarea class="description-area" name="quora_question" maxlength="200" placeholder="Enter quora question"></textarea>
+                </div>
+
+                <div class="drop-down textarea-div" id="childhood-div">
+                    <p>Childhood:</p>
+                    <textarea class="description-area" name="childhood" maxlength="200" placeholder="Childhood"></textarea>
+                </div>
+
+                <div class="drop-down textarea-div" id="hobbies-div">
+                    <p>Hobbies:</p>
+                    <textarea class="description-area" name="hobbies" maxlength="200" placeholder="Enter hobbies"></textarea>
+                </div>
+
+                <div class="drop-down textarea-div" id="interests-div">
+                    <p>Interests:</p>
+                    <textarea class="description-area" name="interests" maxlength="200" placeholder="Enter interests"></textarea>
+                </div>
+
+                <div class="drop-down textarea-div" id="skills-div">
+                    <p>Skills:</p>
+                    <textarea class="description-area" name="skills" maxlength="200" placeholder="Enter skills"></textarea>
+                </div>
+
+                <div class="drop-down textarea-div" id="character-traits-div">
+                    <p>Character traits:</p>
+                    <textarea class="description-area" name="character_traits" maxlength="200" placeholder="Enter character traits"></textarea>
+                </div>
+
+                <div class="drop-down textarea-div" id="point-of-view-div">
+                    <p>Point of view:</p>
+                    <textarea class="description-area" name="point_of_view" placeholder="Enter point of view"></textarea>
+                </div>
+
+                <div class="drop-down textarea-div" id="business-description-div">
+                    <p>Business description:</p>
+                    <textarea class="description-area" name="business_description" placeholder="Enter business description"></textarea>
                 </div>
 
                 <button class="submit-btn">Submit</button>

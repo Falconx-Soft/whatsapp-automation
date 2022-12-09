@@ -70,7 +70,7 @@
     height: 60px;
 }
 
-#description-div{
+.textarea-div{
     margin-bottom: 20px;
 }
 
@@ -81,4 +81,5 @@
     background-color: black;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 20px;
 }
