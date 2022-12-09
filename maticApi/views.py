@@ -34,21 +34,21 @@ def home(request):
         print(request.POST['audience'],"Audience")
         print(request.POST['keywords'],"Keywords")
 
-        response = call_copymatic(
-                        request.POST['content'],
-                        request.POST['model'],
-                        request.POST['tone'],
-                        request.POST['creativity'],
-                        request.POST['language'],
-                        request.POST['audience'],
-                        request.POST['keywords']
-                    )
-        context = {
-            'tab_title':'Home',
-            'response':response['ideas'].values()
-        }
-    else:
-        context = {
-            'tab_title':'Home',
-        }
+        if request.POST['content'] != '':
+            response = call_copymatic(
+                            request.POST['content'],
+                            request.POST['model'],
+                            request.POST['tone'],
+                            request.POST['creativity'],
+                            request.POST['language'],
+                            request.POST['audience'],
+                            request.POST['keywords']
+                        )
+            context = {
+                'tab_title':'Home',
+                'response':response['ideas'].values()
+            }
+    context = {
+        'tab_title':'Home',
+    }
     return render(request,'maticApi/home.html',context)

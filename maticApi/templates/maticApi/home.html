@@ -17,82 +17,83 @@
                 {% csrf_token %}
                 <textarea class="textarea" placeholder="Enter text here" rows="10" name="content"></textarea>
                 
+                <div class="drop-down" style="margin-top: 20px;">
+                    <p>Model:</p>
+                    <select name="model" id="model-dropdown" onchange="model_change()">
+                        <option value="social-media-post-business">Social Media Post (Business)</option>
+                        <option value="social-media-post-personal">Social Media Post (Personal)</option>
+                        <option value="instagram-captions">Instagram Captions</option>
+                        <option value="instagram-hashtag-generator">Instagram Hashtags Generator</option>
+                        <option value="facebook-primary">Facebook Primary Text</option>
+                        <option value="facebook-headlines">Facebook Headlines</option>
+                        <option value="google-headlines">Google Ads Headlines</option>
+                        <option value="google-descriptions">Google Ads Description</option>
+                        <option value="youtube-descriptions">Video Descriptions</option>
+                        <option value="quora-answers">Quora Answers</option>
+                        <option value="personal-bio">Personal Bio</option>
+                        <option value="website-headlines">Website Headlines</option>
+                        <option value="website-subheadlines">Website Subheaders</option>
+                        <option value="product-descriptions">Product Descriptions</option>
+                        <option value="value-proposition">Value Proposition</option>
+                        <option value="	feature-to-benefit">Feature To Benefit</option>
+                        <option value="meta-titles">Meta Titles (URL)</option>
+                        <option value="meta-descriptions">Meta Descriptions</option>
+                        <option value="meta-descriptions-url">Meta Descriptions (URL)</option>
+                        <option value="faq">FAQs</option>
+                        <option value="faq-answers">FAQ Answers</option>
+                        <option value="subheading-paragraph">Paragraph Writer</option>
+                        <option value="blog-sections">Blog Section</option>
+                        <option value="blog-titles">Blog Titles</option>
+                        <option value="blog-ideas">Blog Ideas</option>
+                        <option value="blog-titles-listicles">Blog Titles (Listicles)</option>
+                        <option value="blog-intros">Blog Intros</option>
+                        <option value="blog-intros-new">Blog Intros New</option>
+                        <option value="write-more">Write More</option>
+                        <option value="pricing-features">Pricing Features</option>
+                        <option value="blog-outline">Blog Outlines</option>
+                        <option value="blog-conclusions">Blog Conclusions</option>
+                        <option value="talking-points">Talking Points</option>
+                        <option value="pros-cons">Pros & Cons</option>
+                        <option value="ecommerce-product-descriptions">Ecommerce Product Descriptions</option>
+                        <option value="ecommerce-category-descriptions">Ecommerce Category Descriptions</option>
+                        <option value="ecommerce-product-names">Ecommerce Product Names</option>
+                        <option value="sentence-rewriter">Sentence Rewriter</option>
+                        <option value="rewrite-with-keyword">Rewrite With Keyword</option>
+                        <option value="sentence-expander">Sentence Expander</option>
+                        <option value="tldr">Text Summarizer (TL;DR)</option>
+                        <option value="startup-name-generator">Startup Name Generator</option>
+                        <option value="mission-statement">Mission Statement</option>
+                        <option value="vision-statement">Vision Statement</option>
+                        <option value="review-responder">Review Responder</option>
+                        <option value="grammar-rewriter">Grammar Rewriter</option>
+                        <option value="essay-intros">Essay Intros</option>
+                        <option value="essay-outlines">Essay Outlines</option>
+                        <option value="project-text-proposal">Project Text Proposal</option>
+                        <option value="write-for-me">Write for me</option>
+                        <option value="pain-agitate-solution">Pain-Agitate-Solution</option>
+                        <option value="attention-interest-desire-action">AIDA Formula</option>
+                        <option value="quest">QUEST Formula</option>
+                        <option value="testimonials">Testimonials / Reviews</option>
+                        <option value="how-it-works">How It Works</option>
+                        <option value="about-us">About Us</option>
+                        <option value="cta">Call To Action</option>
+                        <option value="press-releases">Press Releases</option>
+                        <option value="video-script-intros">Video Script Intros</option>
+                        <option value="video-script-outlines">Video Script Outlines</option>
+                        <option value="video-script-section">Video Script Section</option>
+                        <option value="cold-email">Cold Email</option>
+                        <option value="follow-up-email">Follow-Up Email</option>
+                        <option value="welcome-email">Welcome Email</option>
+                        <option value="cancellation-email">Cancellation Email</option>
+                        <option value="confirmation-email">Confirmation Email</option>
+                        <option value="email-subject-lines">Email Subject Lines</option>
+                        <option value="ecommerce-product-features">Ecommerce Product Description Bullet Points</option>
+                        <option value="amazon-product-descriptions">Amazon Product Descriptions</option>
+                    </select>
+                </div>
+
                 <div class="drop-down-div">
-                    <div class="drop-down">
-                        <p>Model:</p>
-                        <select name="model">
-                            <option value="social-media-post-business">Social Media Post (Business)</option>
-                            <option value="social-media-post-personal">Social Media Post (Personal)</option>
-                            <option value="instagram-captions">Instagram Captions</option>
-                            <option value="instagram-hashtag-generator">Instagram Hashtags Generator</option>
-                            <option value="facebook-primary">Facebook Primary Text</option>
-                            <option value="facebook-headlines">Facebook Headlines</option>
-                            <option value="google-headlines">Google Ads Headlines</option>
-                            <option value="google-descriptions">Google Ads Description</option>
-                            <option value="youtube-descriptions">Video Descriptions</option>
-                            <option value="quora-answers">Quora Answers</option>
-                            <option value="personal-bio">Personal Bio</option>
-                            <option value="website-headlines">Website Headlines</option>
-                            <option value="website-subheadlines">Website Subheaders</option>
-                            <option value="product-descriptions">Product Descriptions</option>
-                            <option value="value-proposition">Value Proposition</option>
-                            <option value="	feature-to-benefit">Feature To Benefit</option>
-                            <option value="meta-titles">Meta Titles (URL)</option>
-                            <option value="meta-descriptions">Meta Descriptions</option>
-                            <option value="meta-descriptions-url">Meta Descriptions (URL)</option>
-                            <option value="faq">FAQs</option>
-                            <option value="faq-answers">FAQ Answers</option>
-                            <option value="subheading-paragraph">Paragraph Writer</option>
-                            <option value="blog-sections">Blog Section</option>
-                            <option value="blog-titles">Blog Titles</option>
-                            <option value="blog-ideas">Blog Ideas</option>
-                            <option value="blog-titles-listicles">Blog Titles (Listicles)</option>
-                            <option value="blog-intros">Blog Intros</option>
-                            <option value="blog-intros-new">Blog Intros New</option>
-                            <option value="write-more">Write More</option>
-                            <option value="pricing-features">Pricing Features</option>
-                            <option value="blog-outline">Blog Outlines</option>
-                            <option value="blog-conclusions">Blog Conclusions</option>
-                            <option value="talking-points">Talking Points</option>
-                            <option value="pros-cons">Pros & Cons</option>
-                            <option value="ecommerce-product-descriptions">Ecommerce Product Descriptions</option>
-                            <option value="ecommerce-category-descriptions">Ecommerce Category Descriptions</option>
-                            <option value="ecommerce-product-names">Ecommerce Product Names</option>
-                            <option value="sentence-rewriter">Sentence Rewriter</option>
-                            <option value="rewrite-with-keyword">Rewrite With Keyword</option>
-                            <option value="sentence-expander">Sentence Expander</option>
-                            <option value="tldr">Text Summarizer (TL;DR)</option>
-                            <option value="startup-name-generator">Startup Name Generator</option>
-                            <option value="mission-statement">Mission Statement</option>
-                            <option value="vision-statement">Vision Statement</option>
-                            <option value="review-responder">Review Responder</option>
-                            <option value="grammar-rewriter">Grammar Rewriter</option>
-                            <option value="essay-intros">Essay Intros</option>
-                            <option value="essay-outlines">Essay Outlines</option>
-                            <option value="project-text-proposal">Project Text Proposal</option>
-                            <option value="write-for-me">Write for me</option>
-                            <option value="pain-agitate-solution">Pain-Agitate-Solution</option>
-                            <option value="attention-interest-desire-action">AIDA Formula</option>
-                            <option value="quest">QUEST Formula</option>
-                            <option value="testimonials">Testimonials / Reviews</option>
-                            <option value="how-it-works">How It Works</option>
-                            <option value="about-us">About Us</option>
-                            <option value="cta">Call To Action</option>
-                            <option value="press-releases">Press Releases</option>
-                            <option value="video-script-intros">Video Script Intros</option>
-                            <option value="video-script-outlines">Video Script Outlines</option>
-                            <option value="video-script-section">Video Script Section</option>
-                            <option value="cold-email">Cold Email</option>
-                            <option value="follow-up-email">Follow-Up Email</option>
-                            <option value="welcome-email">Welcome Email</option>
-                            <option value="cancellation-email">Cancellation Email</option>
-                            <option value="confirmation-email">Confirmation Email</option>
-                            <option value="email-subject-lines">Email Subject Lines</option>
-                            <option value="ecommerce-product-features">Ecommerce Product Description Bullet Points</option>
-                            <option value="amazon-product-descriptions">Amazon Product Descriptions</option>
-                        </select>
-                    </div>
-                    <div class="drop-down">
+                    <div class="drop-down" id="tone-div">
                         <p>Tone:</p>
                         <select name="tone">
                             <option value="professional">Professional</option>
@@ -102,14 +103,14 @@
                             <option value="confident">Confident</option>
                         </select>
                     </div>
-                    <div class="drop-down">
+                    <div class="drop-down" id="creativity-div">
                         <p>Creativity:</p>
                         <select name="creativity">
                             <option value="regular">Regular</option>
                             <option value="high">High</option>
                         </select>
                     </div>
-                    <div class="drop-down">
+                    <div class="drop-down" id="language-div">
                         <p>Language:</p>
                         <select name="language">
                             <option value="English (US)">English (US)</option>
@@ -141,17 +142,28 @@
                             <option value="Indonesian">Indonesian</option>
                         </select>
                     </div>
-                </div>
 
-                <div class="input-div">
-                    <div class="drop-down">
+                    <div class="drop-down" id="audience-div">
                         <p>Audience:</p>
                         <input type="text" placeholder="Enter audience" name="audience">
                     </div>
-                    <div class="drop-down">
+                    <div class="drop-down" id="keywords-div">
                         <p>Keywords:</p>
                         <input type="text" placeholder="Enter keywords" name="keywords">
                     </div>
+                    <div class="drop-down" id="company-name-div">
+                        <p>Company name:</p>
+                        <input type="text" placeholder="Enter company name" name="company_name">
+                    </div>
+                    <div class="drop-down" id="topic-social-div">
+                        <p>Topic social:</p>
+                        <input type="text" placeholder="Enter company name" name="topic_social">
+                    </div>
+                </div>
+
+                <div class="drop-down" id="description-div">
+                    <p>Description:</p>
+                    <textarea class="description-area" name="description" maxlength="200" placeholder="Enter description"></textarea>
                 </div>
 
                 <button class="submit-btn">Submit</button>
@@ -167,4 +179,7 @@
 {% endblock %}
 
 {% block js %}
+
+    <script src="{% static 'js/home.js' %}" ></script>
+
 {% endblock %}
